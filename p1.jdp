@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pull'){
+            steps {
+                git credentialsId: 'mvn', url: 'https://github.com/jatinkamlakar1997/studentapp-ui.git'
+            }
+        }
+        stage('Build'){
+            steps {
+                sh 'mvn clean package '
+            }
+        }
+        stage('Test'){
+            steps {
+                echo 'Test Successful by shubham'
+            }
+        }
+        stage('Deploy'){
+            steps {
+                echo 'Deploy Successful by shubham'
+            }
+        }
+    }
+}

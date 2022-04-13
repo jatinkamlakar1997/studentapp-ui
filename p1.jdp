@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull'){
             steps {
-                git credentialsId: 'mvn', url: 'https://github.com/jatinkamlakar1997/studentapp-ui.git'
+                
             }
         }
         stage('Build'){

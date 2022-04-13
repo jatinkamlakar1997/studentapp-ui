@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                withSonarQubeEnv {
+                withSonarQubeEnv() {
     // some block
 }
             }

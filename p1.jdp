@@ -16,10 +16,10 @@ pipeline {
                 echo 'ok'
                 }
             }
-        }
         stage('Deploy'){
             steps {
                 echo 'Deploy Successful by shubham'
             }
         }
+    }
     }

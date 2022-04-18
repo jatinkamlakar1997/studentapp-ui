@@ -20,7 +20,9 @@ pipeline {
             }
             stage('Quality Check'){
             steps {
+            timeout(1) {
                 waitForQualityGate true
+}
 }
                 }
         stage('Deploy'){

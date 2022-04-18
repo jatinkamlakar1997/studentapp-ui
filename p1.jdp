@@ -13,12 +13,16 @@ pipeline {
         }
         stage('Test'){
             steps {
-            waitForQualityGate true
                 withSonarQubeEnv('sonar') {
     sh 'mvn sonar:sonar'
 }
                 }
             }
+            stage('Quality Check'){
+            steps {
+                waitForQualityGate true
+}
+                }
         stage('Deploy'){
             steps {
                 echo 'Deploy Successful by shubham'

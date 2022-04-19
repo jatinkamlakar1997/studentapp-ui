@@ -27,7 +27,7 @@ pipeline {
                 }
         stage('Deploy'){
             steps {
-                echo 'Deploy Successful by shubham'
+                deploy adapters: [tomcat8(credentialsId: 'ec3a55b5-1fab-4d74-bce7-4bc94ad345b1', path: '', url: 'http://3.86.31.129:8080')], contextPath: '/', war: '**/*.war'
             }
         }
     }

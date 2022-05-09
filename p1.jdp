@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                echo 'Building..'
+                git 'https://github.com/jatinkamlakar1997/studentapp-ui.git'
             }
         }
         stage('Test') {

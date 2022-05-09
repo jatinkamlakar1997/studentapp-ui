@@ -7,9 +7,9 @@ pipeline {
                 git 'https://github.com/jatinkamlakar1997/studentapp-ui.git'
             }
         }
-        stage('Test') {
+        stage('Build') {
             steps {
-                echo 'Testing..'
+                sh 'mvn clean package'
             }
         }
         stage('Deploy') {

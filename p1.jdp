@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Test needs tobe done next.'
+                echo 'Test needs tobe done next.' 
             }
         }
         stage('Deploy') {

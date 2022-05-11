@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy on jen....'
+                echo 'Deploy on jenkins....'
             }
         }
     }
